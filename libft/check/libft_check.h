@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 14:25:07 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/12 14:27:51 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/05/12 15:41:16 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,4 @@ int	ft_isascii(int c);
 int	ft_isdigit(int c);
 int	ft_isprint(int c);
 
-#endif LIBFT_CHECK_H /* LIBFT_CHECK_H */
+#endif /* LIBFT_CHECK_H */

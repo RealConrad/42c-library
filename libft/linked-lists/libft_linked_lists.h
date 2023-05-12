@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 11:23:58 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/12 14:23:56 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/05/12 15:41:26 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,4 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
 
-#endif LIBFT_LINKED_LISTS_H /* LIBFT_LINKED_LISTS_H */
+#endif /* LIBFT_LINKED_LISTS_H */

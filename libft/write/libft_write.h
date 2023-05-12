@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 14:29:03 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/12 14:31:25 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/05/12 15:41:34 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,4 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
-#endif LIBFT_WRITE_H /* LIBFT_WRITE_H */
+#endif /* LIBFT_WRITE_H */

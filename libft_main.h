@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 10:30:33 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/12 15:09:48 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/05/12 18:27:17 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,4 @@
 # include "libft/libft.h"
 # include "printf/ft_printf.h"
 
-#endif LIBFT_MAIN_H /* LIBFT_MAIN_H */
+#endif /* LIBFT_MAIN_H */

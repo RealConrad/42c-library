@@ -6,12 +6,12 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 10:57:54 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/12 11:09:33 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/05/12 15:40:10 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_STRING_H
-# define LIBFT_STRING_HS
+# define LIBFT_STRING_H
 
 # include "../libft.h"
 
