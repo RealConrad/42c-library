@@ -42,9 +42,10 @@ make clean
 ```
 
 # Usage
+> Make sure you run `make` before compiling, else you will get errors!
 1. Add the header file
 ```shell
-# include "libft_main.h" // # include <path-to-header-file>
+include "libft_main.h" // # include <path-to-header-file>
 ```
 2. Compile with the following flags
 ```shell
@@ -67,3 +68,6 @@ Compiling:
 ```shell
 cc -Wall -Wextra -Werror main.clibft.a
 ```
+
+# License
+[MIT](https://choosealicense.com/licenses/mit/)
