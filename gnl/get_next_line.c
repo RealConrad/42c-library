@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 10:48:29 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/09 12:20:44 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/05/12 18:28:16 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ char	*get_current_line(char *buffer, int fd)
 			return (NULL);
 		}
 		temp[bytes_read] = '\0';
-		buffer = ft_strjoin(buffer, temp);
+		buffer = strjoin(buffer, temp);
 		if (!buffer)
 			return (free(temp), NULL);
 	}

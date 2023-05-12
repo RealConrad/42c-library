@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 10:48:32 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/08 09:51:16 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/05/12 18:28:05 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ size_t	ft_strlen(const char *str)
  * @note The returned string must be freed by the caller 
  *  when it is no longer needed.
 */
-char	*ft_strjoin(char *s1, char *s2)
+char	*strjoin(char *s1, char *s2)
 {
 	char	*str;
 	int		i;
