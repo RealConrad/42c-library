@@ -27,5 +27,43 @@
 # Installation
 1. Clone the repository
 ```shell
-% git clone https://github.com/RealConrad/42c-library.git
+git clone https://github.com/RealConrad/42c-library.git
+```
+
+2. Enter directory
+```shell
+cd 42c-library
+```
+
+3. Create the library and clean up
+```shell
+make
+make clean
+```
+
+# Usage
+1. Add the header file
+```shell
+# include "libft_main.h" // # include <path-to-header-file>
+```
+2. Compile with the following flags
+```shell
+cc -Wall -Wextra -Werror <your-file> libft.a
+```
+## Examples
+**File: main.c**
+```c
+# include "libft_main.h"
+
+int main() {
+    char *s = "Hello World!";
+    int  length = ft_strlen(s);
+
+    ft_printf("Length: %d\n", length);
+    return (0);
+}
+```
+Compiling:
+```shell
+cc -Wall -Wextra -Werror main.clibft.a
 ```
