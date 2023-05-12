@@ -9,7 +9,7 @@
     <b><i>My C library that consists of Libft, Printf and GNL and more.</i></b>
 </p>
 <p>
-    Made in&nbsp&nbsp
+    Coded in&nbsp&nbsp
     <a href="https://skillicons.dev">
         <img src="https://skillicons.dev/icons?i=c,vscode,git" />
     </a>
