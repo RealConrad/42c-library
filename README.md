@@ -18,6 +18,7 @@
 <br />
 
 # Features
+>NOTE: I will continue to update/improve this library and cannot guarantee it will always be backwards compatible.
 - Includes all functions from [Libft](https://github.com/RealConrad/42libft.git)
 - Includes my own version of [printf](https://github.com/RealConrad/42printf.git)
 - Includes [get_next_line](https://github.com/RealConrad/42get-next-line.git) project.
