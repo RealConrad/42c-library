@@ -6,7 +6,7 @@
 #    By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 10:30:39 by cwenz             #+#    #+#              #
-#    Updated: 2023/05/12 15:17:40 by cwenz            ###   ########.fr        #
+#    Updated: 2023/05/12 18:34:46 by cwenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,14 @@
 NAME					= libft.a
 
 # Compiler and flags
-GCC						= cc
+CC						= cc
 CFLAGS					= -Wall -Werror -Wextra
 AFLAGS					= ar -rcs
 
 # Different directories
 LIBFT_CHECK_DIR			= ./libft/check/
 LIBFT_CONVERSION_DIR	= ./libft/conversion/
-LIBFT_LINKED_LISTS_DIR	= ./libft/linked_lists
+LIBFT_LINKED_LISTS_DIR	= ./libft/linked-lists/
 LIBFT_MEM_DIR			= ./libft/mem/
 LIBFT_STRING_DIR		= ./libft/string/
 LIBFT_WRITE_DIR			= ./libft/write/
@@ -42,48 +42,54 @@ LIBFT_STRING			= ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
 						  ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c \
 						  ft_toupper.c
 LIBFT_WRITE				= ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c
-LIBFT_SRC 				+= $(addprefix $(LIBFT_CHECK_DIR), $(LIBFT_CHECK_SRC))
-LIBFT_SRC 				+= $(addprefix $(LIBFT_CONVERSION_DIR), $(LIBFT_CONVERSION_SRC))
-LIBFT_SRC 				+= $(addprefix $(LIBFT_LINKED_LISTS_DIR), $(LIBFT_LINKED_LISTS_SRC))
-LIBFT_SRC 				+= $(addprefix $(LIBFT_MEM_DIR), $(LIBFT_MEM_SRC))
-LIBFT_SRC 				+= $(addprefix $(LIBFT_STRING_DIR), $(LIBFT_STRING_SRC))
-LIBFT_SRC 				+= $(addprefix $(LIBFT_WRITE_DIR), $(LIBFT_WRITE_SRC))
+LIBFT_SRC 				+= $(addprefix $(LIBFT_CHECK_DIR), $(LIBFT_CHECK))
+LIBFT_SRC 				+= $(addprefix $(LIBFT_CONVERSION_DIR), $(LIBFT_CONVERSION))
+LIBFT_SRC 				+= $(addprefix $(LIBFT_LINKED_LISTS_DIR), $(LIBFT_LINKED_LISTS))
+LIBFT_SRC 				+= $(addprefix $(LIBFT_MEM_DIR), $(LIBFT_MEM))
+LIBFT_SRC 				+= $(addprefix $(LIBFT_STRING_DIR), $(LIBFT_STRING))
+LIBFT_SRC 				+= $(addprefix $(LIBFT_WRITE_DIR), $(LIBFT_WRITE))
 
 PRINTF					= ft_formatting_specifiers.c ft_number_specifiers.c ft_printf.c ft_string_specifiers.c
 PRINTF_SRC				= $(addprefix $(PRINTF_DIR), $(PRINTF))
 
-GNL						= ft_get_next_line_utils.c ft_get_next_line.c
+GNL						= get_next_line_utils.c get_next_line.c
 GNL_SRC					= $(addprefix $(GNL_DIR), $(GNL))
 
-MAIN_SRC				= LIBFT_SRC PRINTF_SRC GNL_SRC
+MAIN_SRC				= $(LIBFT_SRC) $(PRINTF_SRC) $(GNL_SRC)
 
 # Object files (.o files)
-OBJS = $(MAIN_SRC:.c=.o)
+LIBFT_OBJS = $(LIBFT_SRC:.c=.o)
+PRINTF_OBJS = $(PRINTF_SRC:.c=.o)
+GNL_OBJS = $(GNL_SRC:.c=.o)
 
-# Create the library
+OBJS = $(LIBFT_OBJS) $(PRINTF_OBJS) $(GNL_OBJS)
+
+# Create the library, depends on $(NAME)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(AFLAGS) $(NAME) $(OBJS)
+	@$(AFLAGS) $@ $(OBJS)
 	@echo $(GREEN)"Created $(NAME) library successfully"$(DEFAULT)
 
-$(OBJS): $(MAIN_SRC)
-	@$(CC) -c $(CFLAGS) $(MAIN_SRC)
-	@echo $(GREEN)"Compiled files"$(DEFAULT)
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
+# Clean the object files
 clean:
 	@rm -f $(OBJS)
-	@echo $(RED)"Cleaned all object files"$(DEFAULT)
+	@echo $(RED)"Removed object files"$(DEFAULT)
 
-fclean:
+# Clean the object files and the library
+fclean: clean
 	@rm -f $(NAME)
-	@echo $(RED)"Cleaned $(NAME) library"$(DEFAULT)
+	@echo $(RED)"Removed $(NAME) library"$(DEFAULT)
 
-re: fclean all
-	
-.PHONY:	all clean fclean re
+# Rebuild the library
+re: fclean clean all
+
+.PHONY: all clean fclean re
 
 # Colours to make it look nice :)
-DEFAULT					= "\033[39m"
-GREEN					= "\033[32m"
-RED						= "\033[31m"
+DEFAULT                 = "\033[39m"
+GREEN                   = "\033[32m"
+RED                     = "\033[31m"
