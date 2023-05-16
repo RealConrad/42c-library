@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 10:48:29 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/12 18:28:16 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/05/16 10:16:38 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,22 @@
 */
 char	*get_next_line(int fd)
 {
-	static char	*buffer = NULL;
+	static char	*buffer[FOPEN_MAX];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
-	buffer = get_current_line(buffer, fd);
-	if (!buffer)
+	buffer[fd] = get_current_line(buffer[fd], fd);
+	if (!buffer[fd])
 		return (NULL);
-	line = set_current_line(buffer);
-	if (line[0] == '\0' && !ft_strchr(buffer, '\n'))
+	line = set_current_line(buffer[fd]);
+	if (line[0] == '\0' && !ft_strchr(buffer[fd], '\n'))
 	{
 		free(line);
-		buffer = free_upto(buffer);
+		buffer[fd] = free_upto(buffer[fd]);
 		return (NULL);
 	}
-	buffer = free_upto(buffer);
+	buffer[fd] = free_upto(buffer[fd]);
 	return (line);
 }
 
