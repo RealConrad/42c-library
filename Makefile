@@ -6,7 +6,7 @@
 #    By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 10:30:39 by cwenz             #+#    #+#              #
-#    Updated: 2023/05/12 18:34:46 by cwenz            ###   ########.fr        #
+#    Updated: 2023/05/24 13:20:49 by cwenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AFLAGS) $@ $(OBJS)
-	@echo $(GREEN)"Created $(NAME) library successfully"$(DEFAULT)
+	@echo $(GREEN)"Created $@ library successfully"$(DEFAULT)
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -85,7 +85,8 @@ fclean: clean
 	@echo $(RED)"Removed $(NAME) library"$(DEFAULT)
 
 # Rebuild the library
-re: fclean clean all
+re: fclean
+	$(MAKE) all
 
 .PHONY: all clean fclean re
 
