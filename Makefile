@@ -6,7 +6,7 @@
 #    By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 10:30:39 by cwenz             #+#    #+#              #
-#    Updated: 2023/05/24 14:27:36 by cwenz            ###   ########.fr        #
+#    Updated: 2023/05/24 14:31:07 by cwenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AFLAGS) $@ $(OBJS)
-	@echo $(GREEN)"Created $@ library successfully"$(DEFAULT)
+	@echo $(GREEN)"LIBFT: Created library successfully"$(DEFAULT)
 
 # @mkdir -p $(@D) ensures that the directory exists before trying to place a file in it 
 # @D variable represents the directory part of the target
@@ -86,12 +86,12 @@ $(BUILD_DIR)/%.o: %.c
 clean:
 	@rm -f $(OBJS)
 	@rm -r $(BUILD_DIR)
-	@echo $(RED)"Removed object files for $(NAME)"$(DEFAULT)
+	@echo $(RED)"LIBFT: Remove object files"$(DEFAULT)
 
 # Clean the object files and the library
 fclean: clean
 	@rm -f $(NAME)
-	@echo $(RED)"Removed $(NAME) library"$(DEFAULT)
+	@echo $(RED)"LIBFT: Removed library"$(DEFAULT)
 
 # Rebuild the library
 re: fclean
