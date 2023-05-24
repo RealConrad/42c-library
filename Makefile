@@ -6,7 +6,7 @@
 #    By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 10:30:39 by cwenz             #+#    #+#              #
-#    Updated: 2023/05/24 13:48:37 by cwenz            ###   ########.fr        #
+#    Updated: 2023/05/24 14:27:36 by cwenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,7 @@ $(BUILD_DIR)/%.o: %.c
 clean:
 	@rm -f $(OBJS)
 	@rm -r $(BUILD_DIR)
-	@echo $(RED)"Removed object files"$(DEFAULT)
+	@echo $(RED)"Removed object files for $(NAME)"$(DEFAULT)
 
 # Clean the object files and the library
 fclean: clean
