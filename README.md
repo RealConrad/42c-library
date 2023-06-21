@@ -67,7 +67,7 @@ int main() {
 ```
 Compiling:
 ```shell
-cc -Wall -Wextra -Werror main.clibft.a
+cc -Wall -Wextra -Werror main.c libft.a
 ```
 
 # License
