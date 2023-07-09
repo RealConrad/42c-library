@@ -43,7 +43,7 @@ make clean
 ```
 
 # Usage
-> Make sure you run `make` before compiling, else you will get errors!
+> Make sure you create the library before compiling, else you will get errors!
 1. Add the header file
 ```shell
 include "libft_main.h" // # include <path-to-header-file>
@@ -67,7 +67,7 @@ int main() {
 ```
 Compiling:
 ```shell
-cc -Wall -Wextra -Werror main.clibft.a
+cc -Wall -Wextra -Werror main.c libft.a
 ```
 
 # License
