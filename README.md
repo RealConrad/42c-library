@@ -36,9 +36,12 @@ git clone https://github.com/RealConrad/42c-library.git
 cd 42c-library
 ```
 
-3. Create the library and clean up
+3. Create the library
 ```shell
 make
+```
+4. Clean up object files (Opitonal):
+```shell
 make clean
 ```
 
