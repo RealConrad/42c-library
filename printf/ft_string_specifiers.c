@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 07:54:48 by cwenz             #+#    #+#             */
-/*   Updated: 2023/04/27 15:05:27 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/07/09 13:41:58 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_putstr(char *str)
 	}
 	while (str[i])
 	{
-		if (ft_putchar(str[i]) < 0) // Check if write fails
+		if (ft_putchar(str[i]) < 0)
 			return (-1);
 		i++;
 	}

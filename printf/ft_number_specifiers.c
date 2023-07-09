@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 09:45:12 by cwenz             #+#    #+#             */
-/*   Updated: 2023/04/27 16:00:21 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/07/09 13:41:34 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int	ft_puthex(size_t num, char c)
 	}
 	while (i > 0)
 	{
-		if (ft_putchar(hex_string[--i]) < 0) // Check if write fails
+		if (ft_putchar(hex_string[--i]) < 0)
 			return (-1);
 		else
 			length++;
