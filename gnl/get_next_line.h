@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 10:48:51 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/16 10:16:30 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/07/14 18:11:45 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 
 char	*get_next_line(int fd);
 char	*strjoin(char *s1, char *s2);
-size_t	ft_strlen(const char *str);
-char	*ft_strchr(const char *s, int c);
+size_t	gnl_strlen(const char *str);
+char	*gnl_strchr(const char *s, int c);
 char	*free_upto(char *str);
 char	*set_current_line(char *str);
 char	*get_current_line(char *buf, int fd);

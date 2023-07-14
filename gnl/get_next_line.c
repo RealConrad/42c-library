@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 10:48:29 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/16 10:16:38 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/07/14 18:11:37 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*get_next_line(int fd)
 	if (!buffer[fd])
 		return (NULL);
 	line = set_current_line(buffer[fd]);
-	if (line[0] == '\0' && !ft_strchr(buffer[fd], '\n'))
+	if (line[0] == '\0' && !gnl_strchr(buffer[fd], '\n'))
 	{
 		free(line);
 		buffer[fd] = free_upto(buffer[fd]);
@@ -63,7 +63,7 @@ char	*get_current_line(char *buffer, int fd)
 	temp = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!temp)
 		return (NULL);
-	while ((!ft_strchr(buffer, '\n') && bytes_read != 0))
+	while ((!gnl_strchr(buffer, '\n') && bytes_read != 0))
 	{
 		bytes_read = read(fd, temp, BUFFER_SIZE);
 		if (bytes_read == -1)
@@ -150,7 +150,7 @@ char	*free_upto(char *str)
 	if (str[i] == '\0')
 		return (free(str), NULL);
 	i++;
-	temp = malloc(sizeof(char) * ft_strlen(str) - i + 1);
+	temp = malloc(sizeof(char) * gnl_strlen(str) - i + 1);
 	if (!temp)
 		return (free(str), NULL);
 	while (str[i])

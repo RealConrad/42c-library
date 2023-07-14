@@ -6,7 +6,7 @@
 /*   By: cwenz <cwenz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 10:48:32 by cwenz             #+#    #+#             */
-/*   Updated: 2023/05/12 18:28:05 by cwenz            ###   ########.fr       */
+/*   Updated: 2023/07/14 18:11:16 by cwenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * @return The length of the string pointed to by str, 
  *  not including the null terminator
 */
-size_t	ft_strlen(const char *str)
+size_t	gnl_strlen(const char *str)
 {
 	size_t	i;
 
@@ -56,7 +56,7 @@ char	*strjoin(char *s1, char *s2)
 			return (free(s1), NULL);
 		s1[0] = '\0';
 	}
-	str = (char *)malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	str = (char *)malloc(sizeof(char) * gnl_strlen(s1) + gnl_strlen(s2) + 1);
 	if (!str)
 		return (free(s1), NULL);
 	while (s1[++i])
@@ -75,7 +75,7 @@ char	*strjoin(char *s1, char *s2)
  * @param c Character to be located
  * @return Returns a pointer to the first occurrence of the character
 */
-char	*ft_strchr(const char *s, int c)
+char	*gnl_strchr(const char *s, int c)
 {
 	char	*ptr_s;
 
