@@ -58,7 +58,7 @@ cc -Wall -Wextra -Werror <your-file> libft.a
 ## Examples
 **File: main.c**
 ```c
-# include "libft_main.h"
+# include "c-library.h"
 
 int main() {
     char *s = "Hello World!";
