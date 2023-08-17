@@ -49,7 +49,7 @@ make clean
 > Make sure you create the library before compiling, else you will get errors!
 1. Add the header file
 ```shell
-include "libft_main.h" // # include <path-to-header-file>
+include "c-library.h" // # include <path-to-header-file>
 ```
 2. Compile with the following flags
 ```shell
@@ -58,7 +58,7 @@ cc -Wall -Wextra -Werror <your-file> libft.a
 ## Examples
 **File: main.c**
 ```c
-# include "libft_main.h"
+# include "c-library.h"
 
 int main() {
     char *s = "Hello World!";
